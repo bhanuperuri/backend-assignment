@@ -8,7 +8,7 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forRoot({
       type: 'postgres',
 
-      // 👇 VERY IMPORTANT: use Render environment variables
+      // ✅ ONLY environment variables (works on Render)
       host: process.env.DB_HOST,
       port: Number(process.env.DB_PORT),
       username: process.env.DB_USERNAME,
@@ -25,6 +25,3 @@ import { AuthModule } from './auth/auth.module';
   ],
 })
 export class AppModule {}
-
-
-//Here i connected backend  to postrgresql using typeorm
