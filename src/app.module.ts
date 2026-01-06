@@ -21,3 +21,5 @@ import { AuthModule } from './auth/auth.module';
   ],
 })
 export class AppModule {}
+
+//Here i connected backend  to postrgresql using typeorm
