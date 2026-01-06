@@ -1,16 +1,15 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: true })
   name: string;
 
-  @Column()
+  @Column({ unique: true })
   email: string;
 
   @Column()
-  password: string; // 👈 NEW
+  password: string;
 }
